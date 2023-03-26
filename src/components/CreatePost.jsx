@@ -15,12 +15,11 @@ const theme = createTheme();
 
 export default function CreatePost() {
   const dispatch = useDispatch();
-  const history = useNavigate();
-  const url = window.location.pathname;
+  const history = useNavigate();;
   const { id } = useParams();
 
   const postCreate = useSelector((state) => state.postCreate);
-  const { success } = postCreate;
+  const { success: createSuccess } = postCreate;
 
   const postDetails = useSelector((state) => state.postDetails);
   const { post } = postDetails;
@@ -29,16 +28,16 @@ export default function CreatePost() {
   const { success: updateSuccess } = postUpdate;
 
   React.useEffect(() => {
-    if (url.includes("edit")) {
+    if (id) {
       dispatch(getPostById(id));
     }
-  }, [dispatch, history, id, url, success, updateSuccess]);
+  }, [dispatch, history, id]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
 
-    if (url.includes("edit")) {
+    if (id) {
       const data = {
         title: formData.get("title"),
         body: formData.get("body"),
@@ -58,6 +57,8 @@ export default function CreatePost() {
     }
   };
 
+  // console.log(id);
+
   return (
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
@@ -70,13 +71,13 @@ export default function CreatePost() {
             alignItems: "center",
           }}
         >
-          {success || updateSuccess ? (
+          { createSuccess || updateSuccess ? (
             <Message>Post {updateSuccess ? "Updated" : "Created"}</Message>
           ) : (
             ""
           )}
           <Typography component="h1" variant="h5">
-            {url.includes("create") ? "Create a Post" : "Update Post"}
+            {id ? "Update Post" : "Create a Post"}
           </Typography>
           <Box
             component="form"
@@ -108,7 +109,7 @@ export default function CreatePost() {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              {url.includes("create") ? "Create" : "Update"}
+              {id ? "Update" : "Create"}
             </Button>
           </Box>
         </Box>

@@ -73,7 +73,7 @@ function PostDetails() {
               color="secondary"
               variant="contained"
               sx={{ my: 3, mr: 2 }}
-              href={`/posts/${post.id}/edit`}
+              href={`#/posts/${post.id}/edit`}
             >
               Edit
             </Button>

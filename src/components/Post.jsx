@@ -24,7 +24,7 @@ function Post(props) {
             <Button
               variant="contained"
               color="primary"
-              href={`/posts/${post.id}`}
+              href={`#/posts/${post.id}`}
             >
               Details
             </Button>

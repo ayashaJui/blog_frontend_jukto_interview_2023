@@ -47,7 +47,7 @@ function Home() {
           <Button
             variant="contained"
             sx={{ float: "right" }}
-            href="/posts/create"
+            href="#/posts/create"
           >
             Create
           </Button>

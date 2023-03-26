@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Login from "./components/Login";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import PostDetails from "./components/PostDetails";
 import CreatePost from "./components/CreatePost";
 import { useDispatch } from "react-redux";
@@ -19,21 +19,21 @@ function App() {
   }, [dispatch]);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App" basename="/blog_frontend_jukto_interview_2023">
         <Navbar />
         <Routes>
-          <Route exact path="/blog_frontend_jukto_interview_2023" Component={Home} />
-          <Route path="/blog_frontend_jukto_interview_2023/about" Component={About} />
-          <Route path="/blog_frontend_jukto_interview_2023/contact" Component={Contact} />
-          <Route exact path="/blog_frontend_jukto_interview_2023/login" Component={Login} />
-          <Route exact path="/blog_frontend_jukto_interview_2023/posts/:id" Component={PostDetails} />
-          <Route exact path="/blog_frontend_jukto_interview_2023/posts/create" Component={CreatePost} />
-          <Route exact path="/blog_frontend_jukto_interview_2023/posts/:id/edit" Component={CreatePost} />
+          <Route exact path="/" Component={Home} />
+          <Route exact path="/about" Component={About} />
+          <Route exact path="/contact" Component={Contact} />
+          <Route exact path="/login" Component={Login} />
+          <Route exact path="/posts/:id" Component={PostDetails} />
+          <Route exact path="/posts/create" Component={CreatePost} />
+          <Route exact path="/posts/:id/edit" Component={CreatePost} />
         </Routes>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

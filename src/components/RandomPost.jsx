@@ -16,7 +16,6 @@ function RandomPost({ postLength }) {
   React.useEffect(() => {
     dispatch(getRandomPost(postLength));
     setInterval(() => dispatch(getRandomPost(postLength)), 30000);
-    // return () => clearInterval(timer);
   }, [dispatch, postLength]);
 
   return (
@@ -63,7 +62,7 @@ function RandomPost({ postLength }) {
                 {randomPost.body}
               </Typography>
               <Box sx={{ float: "right", mr: 5, my: 3 }}>
-                <Button variant="contained" href={`/posts/${randomPost.id}`}>
+                <Button variant="contained" href={`#/posts/${randomPost.id}`}>
                   Details
                 </Button>
               </Box>
