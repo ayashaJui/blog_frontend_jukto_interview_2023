@@ -23,13 +23,13 @@ function App() {
       <div className="App" basename="/blog_frontend_jukto_interview_2023">
         <Navbar />
         <Routes>
-          <Route path="/" Component={Home} />
-          <Route path="/about" Component={About} />
-          <Route path="/contact" Component={Contact} />
-          <Route exact path="/login" Component={Login} />
-          <Route exact path="/posts/:id" Component={PostDetails} />
-          <Route exact path="/posts/create" Component={CreatePost} />
-          <Route exact path="/posts/:id/edit" Component={CreatePost} />
+          <Route exact path="/blog_frontend_jukto_interview_2023" Component={Home} />
+          <Route path="/blog_frontend_jukto_interview_2023/about" Component={About} />
+          <Route path="/blog_frontend_jukto_interview_2023/contact" Component={Contact} />
+          <Route exact path="/blog_frontend_jukto_interview_2023/login" Component={Login} />
+          <Route exact path="/blog_frontend_jukto_interview_2023/posts/:id" Component={PostDetails} />
+          <Route exact path="/blog_frontend_jukto_interview_2023/posts/create" Component={CreatePost} />
+          <Route exact path="/blog_frontend_jukto_interview_2023/posts/:id/edit" Component={CreatePost} />
         </Routes>
         <Footer />
       </div>
