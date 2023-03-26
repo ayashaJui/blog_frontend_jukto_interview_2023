@@ -20,7 +20,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="App" basename="/blog_frontend_jukto_interview_2023">
         <Navbar />
         <Routes>
           <Route path="/" Component={Home} />
