@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/blog_frontend_jukto_interview_2023/static/css/main.e6c13ad2.css",
-    "main.js": "/blog_frontend_jukto_interview_2023/static/js/main.c3142874.js",
+    "main.js": "/blog_frontend_jukto_interview_2023/static/js/main.9695598c.js",
     "static/js/787.b13fdd03.chunk.js": "/blog_frontend_jukto_interview_2023/static/js/787.b13fdd03.chunk.js",
     "index.html": "/blog_frontend_jukto_interview_2023/index.html",
     "main.e6c13ad2.css.map": "/blog_frontend_jukto_interview_2023/static/css/main.e6c13ad2.css.map",
-    "main.c3142874.js.map": "/blog_frontend_jukto_interview_2023/static/js/main.c3142874.js.map",
+    "main.9695598c.js.map": "/blog_frontend_jukto_interview_2023/static/js/main.9695598c.js.map",
     "787.b13fdd03.chunk.js.map": "/blog_frontend_jukto_interview_2023/static/js/787.b13fdd03.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.c3142874.js"
+    "static/js/main.9695598c.js"
   ]
 }
